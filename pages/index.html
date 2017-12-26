@@ -5,51 +5,93 @@ permalink: /index
 # ─────────────────────
 title: I-ditory!
 ---
-<div class="jumbotron">
-    <h1 class="display-3">Happy students = {{ page.title }}</h1>
-</div>
+<!-- ____________________________________________________________container 1____________________________________________________________-->
 
-<div class="col-12 col-md-6">
-<h1>Welkom!</h1>    
-<h2>Beste student van Artevelde,</h2>       
-    <p>
-        Eindelijk is hij er! De website waar we al zo lang op wachten en die ons leven heel wat gemakkelijker zal maken!
-        <br>
-        *Juichende studenten*
-        <br>
-        Wie droomt er niet van, de beste plekjes in het auditorium kunnen vanaf u gereserveerd worden. 
-        Zit je graag vooraan, achteraan, aan de zijkant, of in het midden? 
-        Aan jou de keuze! Wij zorgen ervoor dat jouw plekje vrij blijft op een moment naar keuze.
-    </p>
-    <p class="kleinelettertjes">
-        *Omdat dit project nog in opbouw is voorzien we momenteel enkel plaatsen in de campus van Mariakerke.
-    </p>
-</div>
+            <div class="jumbotron bg-dark blackboard">
+                <h1 class="display-3 center">Happy students = {{ page.title }}</h1>
+            </div>
 
-<!--de achtergrondkleur van de tekstvakken hebben nu 
-    de standaard achtergrondkleur van een jumbotron.
-    Om de kleur te veranderen, geef je een extra class
-     aan de div en verander je via css de kleur ervan-->
-<div class="col-12 col-md-6 jumbotron">          
-<h3>De winnaar van vorige week:</h3>              
-    <p>
-        Vorige week werd er gezocht naar de correcte coördinaten van een rode stoel op een foto. De winnaar was: Bart Calis.
-        Proficiat Bart! Jij mag voor een week lang de achterste rijen stoeltjes uitschakelen zodat je studenten verplicht zijn vooraan te komen zitten!
-    </p>
-</div>
 
-<div class="col-12 col-md-6 jumbotron">       
-<h3>Deze week: Stoelendans!</h3>           
-<p>
-    Tijdens de middag organiseren wij de stoelendans. 
-    De winnaar wordt beloond met één gratis reservatie. 
-    Moeilijk is het niet om te winnen want onze stoeltjes zijn net gesmeerd en draaien als nooit tevoren!
-    <br><br>
-    Opgelet: Wil je graag meedoen?
-    vergeet je dan zeker niet in te schrijven via het <a href="https://www.facebook.com/events/129795441070780/">facebookevenement!</a>
-</p>
 
-</div>
+<!-- ____________________________________________________________container 2____________________________________________________________-->
+
 <div class="container">
-        <a class="btn btn-dark" href="winkelmandje.html">Winkelmandje</a>
-</div>
+    <div class="row">
+
+
+        <!-- TEKSTBLOK WELKOM-->
+        <div class="col-12 col-md-6">
+            <h1>Welkom!
+            </h1>    
+                <h2>Beste student van Artevelde,
+                </h2>       
+                    <p>Eindelijk is hij er! De website waar we al zo lang op wachten en die ons leven heel wat gemakkelijker zal maken!<br>
+                    <strong><em>*Juichende studenten*</em></strong><br>
+                    Wie droomt er niet van, de beste plekjes in het auditorium kunnen vanaf nu gereserveerd worden. 
+                    Zit je graag vooraan, achteraan, aan de zijkant, of in het midden? 
+                    Aan jou de keuze! Wij zorgen ervoor dat jouw plekje vrij blijft op een moment naar keuze.
+                    </p>
+                    <p class="kleinelettertjes">
+                        *Omdat dit project nog in opbouw is voorzien we momenteel enkel plaatsen in de campus van Mariakerke.
+                    </p>
+        </div>
+
+
+                    
+<!--testje start -->
+
+        <!-- TEKSTBLOK WEDSTRIJDEN-->
+        <div class="col-12 col-md-6"> 
+            
+            <div class="row">       
+                <div class="bg-first">
+                    <h1>Wedstrijden</h1>
+
+                        <!-- TEKSTBLOK WINNAAR VORIGE WEEK-->
+                    <div class="position-static">
+                        <input type="checkbox" class="leesmeer-state" id="post-1" />
+                        <h3>Winnaar van vorige week</h3>                        
+                        <span class="leesmeer-target">
+                                <img class="image" src="{{ site.baseurl }}/images/stoel.png" alt="rode stoel">
+                            </span>
+                        <p class="leesmeer-wrap">Vorige week werd er gezocht naar de correcte coördinaten van een rode stoel op een foto.
+                        
+                            <span class="leesmeer-target">
+                            De winnaar was: Bart Calis.
+                            Proficiat Bart! Jij mag voor een week lang de achterste 
+                            rijen stoeltjes uitschakelen zodat je studenten 
+                            verplicht zijn vooraan te komen zitten!
+                            </span>
+                        </p>
+                        <label for="post-1" class="leesmeer-trigger btn btn-secondary"></label>
+                    </div>
+                    <hr>
+                        <!-- TEKSTBLOK WEDSTRIJD DEZE WEEK-->
+                     <div class="position-static">  
+                            <input type="checkbox" class="leesmeer-state" id="post-2" />
+                            <h3>Deze week: Stoelendans!</h3>                        
+                            <span class="leesmeer-target">
+                                    <img class="image" src="{{ site.baseurl }}/images/stoelendans.png" alt="rode stoel">
+                                </span>
+                            <p class="leesmeer-wrap">Tijdens de middag organiseren wij de stoelendans. 
+                        
+                                <span class="leesmeer-target">
+                                De winnaar wordt beloond met één gratis reservatie. 
+                                Moeilijk is het niet om te winnen want onze stoeltjes zijn net gesmeerd en draaien als nooit tevoren!
+                                <br><br>
+                                Opgelet: Wil je graag meedoen?
+                                vergeet je dan zeker niet in te schrijven via het
+                                <a href="https://www.facebook.com/events/129795441070780/">facebookevenement!</a>
+                                </span>
+                            </p>
+                            <label for="post-2" class="leesmeer-trigger btn btn-secondary"></label>
+                    </div> 
+                
+
+                </div>
+            </div>
+
+
+        </div> <!-- afsluiting tekstblok wedstrijden -->
+    </div> <!-- afsluiting row -->
+</div> <!-- afsluiting container -->

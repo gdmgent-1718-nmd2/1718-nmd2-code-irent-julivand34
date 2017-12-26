@@ -1,7 +1,9 @@
-// Custom Variables
-//
-// Put variables overrides here.
-//
+// variables overrides //
+.breadcrumb {
+    background-color: white !important;
+}
+
+
 // See _vendor/bootstrap/scss/_variables.scss
 
 //
@@ -11,10 +13,15 @@
 $orange:  #f28910;
 $primary: $orange;
 
+$blackboard: rgb(14, 46, 14);
+$secondary: $blackboard;
+
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+$font-family-base: Montserrat, sans-serif;
 
-$font-family-base: Merriweather, serif;
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+$font-family: Pangolin;

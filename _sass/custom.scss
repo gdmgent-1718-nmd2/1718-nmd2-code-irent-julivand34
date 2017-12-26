@@ -1,19 +1,666 @@
-/* Deze heb ik gebruikt om de knop van het winkelmandje 
-los te zetten. Nu plakte het bij index.html aan de footer 
-of bij andere pagina's bovenaan aan de navbar */
-.btn {
-    margin: 10px;
+/* ------------------------------------------------------ GLOBALE CSS ------------------------------------------------------ */
+/* ------------ Sprites ------------ */
+.icon-box-icon {
+    background: url("../../images/sprite.png");
+    background-size: 180px;
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    text-indent: -999rem;
+    float:left;
+    border-radius: 10px;
+}
+.sprite-winkelmandje {
+    background-position:0px 0px;
+    background-color: rgb(252, 177,63);
 }
 
-/*voor de achtergrondkleur bij tabellen*/
-.bg-tabel {
-    background-color: grey;
+.sprite-bancontact {
+    background-position:-120px 0px;
+}
+
+.sprite-visa {
+    background-position:0px -60px;
+}
+
+.sprite-ideal {
+    background-position:-60px -60px;
+}
+
+.sprite-mastercard {
+    background-position:-120px -60px;
+}
+
+.sprite-paypal {
+    background-position: 0px -120px;
+}
+
+
+
+/* ------------ Footer ------------ */
+.footer {
+    padding: 30px;
+    margin-top: 60px;
+}
+/* ------------ Typografie ------------ */
+.kleinelettertjes {
+    font-size: 13px;
+    color: rgb(179, 179, 179);
+}
+h1 {
+    font-weight: 900;
+    font-size: 25px;
+}
+h3 {
+font-size: 16px;
+font-weight: 700;
+}
+
+.footer h3 {
+    color: white;
+}
+
+@media (min-width: 1028px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .veeltekst {
+        column-count: 2;
+    }
+}
+
+/* ------------ Tekstkleur in donkere vlakken ------------ */
+.light {
+    color: rgb(189, 189, 189);
+}
+
+
+/* ------------ Buttons ------------ */
+.btn {
+    border: none;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.5);
+    margin: 15px;
+    color: white;
+}
+/* ------------ Achtergrondkleuren ------------ */
+.blackboard {
+    color: white;
+    font-family: Pangolin, cursive;
+}
+.bg-first {
+    background-color: rgb(210,217,69);
+    float: right;
+    padding: 2rem;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* ------------------------------------------------------ INDEX ------------------------------------------------------ */
+
+/* Aliniëring van de slogan */
+.center {
+    text-align: center;
+}
+.jumbotron.bg-dark.blackboard {
+    margin-top: -61px;
+    border-radius: 0px;
+    margin-bottom: 60px;
+}
+
+/* ------------ Read more/less ------------ */
+.leesmeer-state {
+    display: none;
+  }
+.leesmeer-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .15s ease;
+  }
+.leesmeer-state:checked ~ .leesmeer-wrap .leesmeer-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+  }
+.leesmeer-state ~ .leesmeer-trigger:before {
+    content: 'Toon meer';
+  } 
+.leesmeer-state:checked ~ .leesmeer-trigger:before {
+    content: 'Tekst verbergen';
+  } 
+.leesmeer-trigger {
+    cursor: pointer;
+  }
+
+/* ------------ Wedstrijden ------------ */ //--------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+.card {
+    border: none;
+}
+
+/* ------------ Images ------------ */
+/* Images homepagina - wedstrijden */
+.image {
+width: 100px;
+float: left;
+margin: 10px;
+margin-bottom: 0px;
+}
+
+/* ------------------------------------------------------ SHOP ------------------------------------------------------ */
+/* ------------ CSS --> SEATS ------------ */
+/* seat-selection*/
+/* .cat-a {
+    background: rgb(61, 108, 209);
+}
+.cat-b {
+    background: rgb(204, 167, 20);
+}
+.cat-c {
+    background: rgb(137, 205, 255);
+
+}
+*/
+
+.cat-a {
+    background: rgb(61, 108, 209);
+}
+.cat-b {
+    background: rgb(210,217,69);
+}
+.cat-c {
+    background: rgb(4,187,191);
+
+}
+.seat {
+    float: left;
+    display: block;
+    width: 7%;
+    height: 20px;
+    margin-bottom: -3px;
+    margin-top: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* De hoogte van de stoeltjes aanpassen */
+@media (min-width: 768px) {
+    .seat{
+        height: 30px;
+    }
+}
+@media (min-width: 1028px) {
+    .seat{
+        height: 40px;
+    }
+}
+.seat-select {
+    display: none;
+}
+.seat-select:checked+.seat {
+    background: red; 
+}
+.disabled {
+    cursor: not-allowed;
+    background: rgb(179, 179, 179);
+}
+
+/* Kleur van de bank */
+.bank {
+    background-color: rgb(77, 77, 77);
+    height: 20px;
+    margin-left: -3px;
+    margin-top: 30px;
+    border-radius: 3px;
+}
+
+/* De hoogte van de bank aanpassen */
+@media (min-width: 768px) {
+    .bank{
+        height: 40px;
+    }
+}
+
+/* Markering stoelen */
+.groen {
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0), rgb(61, 108, 209));
+    border-radius: 40px;
+    padding: 6px;
+}
+.blauw {
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0), rgb(210,217,69));
+    border-radius: 40px;
+    padding: 6px;
+}
+.oranje {
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0), rgb(4,187,191));
+    border-radius: 40px;
+    padding: 6px;
+}
+/* ------ Happy students ------ */
+.happystudent {
+    width: 180px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
+/* ------------------------------------------------------ WINKELMANDJE ------------------------------------------------------ */
+/* ------------ Achtergrondkleur bij tabellen ------------ */
+
+
+/* pijltje animatie: */
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+
+/* winkelmandje: */
+.cf:before,.cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+.wrap {
+  width: 100%;
+}
+// CART HEADER
+.heading {
+  border-bottom: 1px solid rgb(252, 177, 63);
+  margin: 20px;
+}
+
+// TABEL
+.tableHead {
+  display: table;
+  font-size: .75em;
+  li {
+    display: table-cell;
+    text-align: center;
+  }
+}
+// CART Items
+
+.cart { 
+  .items { 
+    display: block;
+    padding: 0px;
+        &.even {
+            background: rgba(252, 177, 63, 0.15);
+        }
+        &.totaal {
+            border-style: solid;
+            border-width: 10px;
+            border-color: rgb(252, 177,63);
+        }    
+        .infoWrap {
+            display: table;
+            width: 100%;
+        }   
+        .cartSection {
+            display: table-cell;
+            vertical-align: middle;
+            h3 {
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 5px;
+            }
+            p {
+                display: inline-block;
+                font-size: 14px;
+                color: grey;
+                margin: 10px;
+            }
+        }
+        .itemImg {
+            float: left;
+        }
+        input.qty {
+            width: 2em;
+            text-align: center;
+            margin: 2px 5px;
+        }
+        .itemImg {
+            width: 8em;
+            padding-right: 15px;
+        }
+    }
+}
+
+a.remove {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background: rgb(4,187,191);
+    padding: .5em;
+    font-size: .75em;
+    display: inline-block;
+    border-radius: 100%;
+    line-height: .85;
+    @include transition(all, .25s, linear);
+    &:hover {
+        background: #f30;
+    }
+}
+
+.btn {
+    &:link , &:visited {
+        text-decoration: none;
+        letter-spacing: -.015em;
+        font-size: 1em;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        background: rgb(4,187,191);
+        font-weight: bold;
+        border-radius: 50px;
+        text-align: right;
+    }
+    &:after {
+        padding: 10px;
+        position: relative;
+        right:0;
+        @include transition(all, .15s, linear);
+    }
+    &:hover , &:focus, &:active {
+        background: rgb(255,89,79);
+        &:after {
+            right: -10px;
+        }
+    }
+    .promoCode & {
+        font-size: .85em;
+        padding: .5em 2em;
+    }
+}
+
+.btn.terug {
+    &:before {
+    content: "\276e";
+    padding: 10px;
+    position: relative;
+    right:0;
+    @include transition(all, .15s, linear);
+    }
+}
+
+.btn.verder {
+    &:after {
+    content: "\276f";
+    }
+}
+
+
+/* TOTAL AND CHECKOUT  */
+@media only screen and (max-width:39.375em){
+    .wrap {
+        width: 98%;
+        padding: 2% 0;
+        margin-bottom: 0px;
+    }
+
+    .heading {
+        padding: 1em;
+        font-size: 90%;
+    }
+    .cart {
+        .items {
+            .cartSection {
+                
+                .itemImg {
+                    width: 100%;
+                    margin: 10px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+/* ------------------------------------------------------ AANMELDEN ALS ------------------------------------------------------ */
+/* Images aanmeldenpagina */
+.image-student {
+    width: 100%;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.5); 
+    margin: 20px;
+}
+
+.image-geenstudent {
+    width: 100%;
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.5); 
+    margin: 20px;
+    background-color: white;
+
+}
+/* ------------------------------------------------- AANMELDEN ------------------------------------------------------ */
+
+
+
+*.aanmelden {
+    margin: 0px auto;
+    text-align: center;
+}
+.student {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.geenstudent {
+    float: left;
+    width: 100%;
+}
+.card {
+    background-color: rgb(210,217,69);
+    width: 100%;
+    border-radius: 5px;
+
     padding: 20px;
 }
-
-.bg-cel {
-    background-color: lightgrey;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+.background.aanmelden {
+    border-radius: 5px;
+    margin-top: 60px;
 }
+
+.btn.aanmelden {
+    width: 300px;
+    text-align: center;
+}
+
+/* ------------------------------------------------------ CONTACT ------------------------------------------------------ */
+.maps {
+    margin-top: 20px;
+}
+.contact-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 999px;
+    background-repeat: none;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+.tess {
+    background-image: url("../../images/tess.jpg");
+    background-size: 170px;
+    background-position: -35px -15px;
+}
+.julie {
+    background-image: url("../../images/julie.jpg");
+    background-size: 120px;
+    background-position: -20px 0px;
+    background-repeat: none;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------ LOGIN ------------------------------------------------------ */
+.form {
+    position: relative;
+    background: #FFFFFF;
+    margin: 0 auto 100px;
+    padding: 45px;
+    
+    box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.5);
+    max-width: 80%;
+  }
+.form.smal {
+    margin-top: 60px;
+    max-width: 50%;
+}
+.form.breed {
+    margin-top: 60px;
+    max-width: 80%;
+}
+  .form input {
+    background: rgba(4,187,191,0.15);
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .studentennummer{
+    width: 100%;
+}
+.registreer {
+    width: 100%;
+    margin: 5px;
+}
+  /*dit is om de CSS van de link 'create an account' aan te passen*/
+  .form .message a {
+    color: rgb(252, 177,63);
+    text-decoration: none;
+  }
+.form-check-label {
+    float: left;
+}
+.form-check-input {
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------ KLEUREN ------------------------------------------------------ */
+/* KLEUREN */
+/* 
+.kleurenpallet-1 {
+    background-color:rgba(255, 255, 0, 0.4);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-2 {
+    background-color:rgb(38, 198, 218);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-3 {
+    background-color:orange;
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-4 {
+    background-color:rgba(0, 255, 0, 0.4);
+    width: 100px;
+    height: 100px;
+}
+.kleurenpallet-5 {
+    background-color:rgb(0, 81, 255);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-6 {
+    background-color:rgb(204, 167, 20);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-7 {
+    background-color: rgb(137, 205, 255);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-8 {
+    background-color:rgba(0, 255, 0, 0.4);
+    width: 100px;
+    height: 100px;
+}
+
+*/
+
+
+
+
+
+.kleurenpallet-1 {
+    background-color:rgb(194, 2, 79);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-2 {
+    background-color: rgb(4,187,191);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-3 {
+    background-color:rgb(210,217,69);
+    width: 100px;
+    height: 100px;
+}
+
+.kleurenpallet-4 {
+    background-color: rgb(252, 177,63);
+    width: 100px;
+    height: 100px;
+}
+.kleurenpallet-5 {
+    background-color:rgb(255,89,79);
+    width: 100px;
+    height: 100px;
+}
+
+
+
