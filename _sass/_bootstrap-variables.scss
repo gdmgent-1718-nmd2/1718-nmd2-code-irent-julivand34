@@ -10,10 +10,10 @@
 // Color system
 //
 
-$orange:  #f28910;
+$orange:  rgb(252, 177,63);
 $primary: $orange;
 
-$blackboard: rgb(14, 46, 14);
+$blackboard: rgb(50, 50, 50);
 $secondary: $blackboard;
 
 // Fonts
@@ -23,5 +23,6 @@ $secondary: $blackboard;
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 $font-family-base: Montserrat, sans-serif;
 
-@import url('https://fonts.googleapis.com/css?family=Pangolin');
-$font-family: Pangolin;
+
+@import url('https://fonts.googleapis.com/css?family=Damion');
+$font-family: Damion, sans-serif;
