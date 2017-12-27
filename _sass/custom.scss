@@ -41,6 +41,8 @@
 @media (min-width: 991px) {
     .mandje-small {
         visibility: hidden;
+        margin-left: 0px !important;
+        display: block !important;
     }
 }
 
@@ -50,9 +52,6 @@
     }
 }
 
-.pos-knop {
-    margin-left: 230px;
-}
 
 /* ------------ Footer ------------ */
 .footer {
@@ -283,10 +282,19 @@ margin-bottom: 0px;
 }
 /* ------ Happy students ------ */
 .happystudent {
-    width: 180px;
+    width: 100px;
     border-radius: 5px;
     margin: 10px;
     box-shadow: 2px 2px 5px black;
+}
+
+@media (min-width: 991px) {
+    .happystudent {
+        width: 180px;
+        border-radius: 5px;
+        margin: 10px;
+        box-shadow: 2px 2px 5px black;
+    }
 }
 
 /* ------------------------------------------------------ WINKELMANDJE ------------------------------------------------------ */
